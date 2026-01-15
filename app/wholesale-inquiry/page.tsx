@@ -100,7 +100,7 @@ export default function WholesaleInquiryPage() {
                   Thank You!
                 </h2>
                 <p className="text-green-700">
-                  We've received your inquiry and will contact you shortly with 
+                  We&apos;ve received your inquiry and will contact you shortly with 
                   wholesale pricing information.
                 </p>
               </div>

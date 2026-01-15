@@ -86,7 +86,7 @@ export default function ContactPage() {
                       Message Sent!
                     </h3>
                     <p className="text-green-700">
-                      We'll get back to you as soon as possible.
+                      We&apos;ll get back to you as soon as possible.
                     </p>
                   </div>
                 ) : (

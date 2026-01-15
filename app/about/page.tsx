@@ -50,8 +50,8 @@ export default function AboutPage() {
                 </p>
                 <p className="text-gray-700 text-lg">
                   As a family-owned business, we understand the importance of 
-                  building lasting relationships with our clients. We're not just 
-                  a supplier—we're your partner in success, committed to helping 
+                  building lasting relationships with our clients. We&apos;re not just 
+                  a supplier—we&apos;re your partner in success, committed to helping 
                   your business thrive with premium products your customers will love.
                 </p>
               </div>
