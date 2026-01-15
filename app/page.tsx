@@ -2,33 +2,36 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col bg-black">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white py-20 md:py-32">
+      <section className="relative urban-gradient py-20 md:py-32 border-b-2 border-primary-600">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Premium Wholesale THCa Flower
+            <h1 className="text-5xl md:text-7xl font-black mb-6 text-white uppercase tracking-tight">
+              Premium <span className="text-primary-500 text-glow-green">Wholesale</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-primary-100">
+            <h2 className="text-3xl md:text-5xl font-bold mb-8 text-white">
+              THCa <span className="text-accent-500 text-glow-red">Flower</span>
+            </h2>
+            <p className="text-xl md:text-2xl mb-8 text-gray-300 font-medium">
               Family-Owned Quality from Oregon & California Farms
             </p>
-            <p className="text-lg md:text-xl mb-10 text-primary-200 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl mb-10 text-gray-400 max-w-2xl mx-auto">
               Serving smoke shops, vape shops, gas stations, and convenience stores 
               throughout Wisconsin and nationwide shipping available.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/products"
-                className="bg-white text-primary-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-50 transition-colors shadow-lg"
+                className="bg-primary-600 text-white px-10 py-4 rounded-md font-bold text-lg hover:bg-primary-500 transition-all glow-green uppercase tracking-wider"
               >
                 View Products
               </Link>
               <Link
                 href="/wholesale-inquiry"
-                className="bg-primary-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-400 transition-colors shadow-lg border-2 border-white"
+                className="bg-accent-600 text-white px-10 py-4 rounded-md font-bold text-lg hover:bg-accent-500 transition-all glow-red uppercase tracking-wider border-2 border-accent-500"
               >
-                Request Wholesale Pricing
+                Get Pricing
               </Link>
             </div>
           </div>
@@ -36,39 +39,39 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-black">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-            <div className="text-center">
-              <div className="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-primary-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="text-center bg-gray-900 p-8 rounded-lg border-2 border-primary-600 hover:border-primary-500 transition-all">
+              <div className="bg-primary-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 glow-green">
+                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Premium Quality</h3>
-              <p className="text-gray-600">
+              <h3 className="text-2xl font-bold mb-3 text-white uppercase">Premium Quality</h3>
+              <p className="text-gray-400">
                 Sourced from our network of trusted farms in Oregon and California
               </p>
             </div>
-            <div className="text-center">
-              <div className="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-primary-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="text-center bg-gray-900 p-8 rounded-lg border-2 border-accent-600 hover:border-accent-500 transition-all">
+              <div className="bg-accent-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 glow-red">
+                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Wholesale Pricing</h3>
-              <p className="text-gray-600">
+              <h3 className="text-2xl font-bold mb-3 text-white uppercase">Wholesale Pricing</h3>
+              <p className="text-gray-400">
                 Competitive prices on pounds and quarter-pounds for business owners
               </p>
             </div>
-            <div className="text-center">
-              <div className="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-primary-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="text-center bg-gray-900 p-8 rounded-lg border-2 border-primary-600 hover:border-primary-500 transition-all">
+              <div className="bg-primary-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 glow-green">
+                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Nationwide Shipping</h3>
-              <p className="text-gray-600">
+              <h3 className="text-2xl font-bold mb-3 text-white uppercase">Nationwide Shipping</h3>
+              <p className="text-gray-400">
                 Fast, reliable shipping to businesses across the United States
               </p>
             </div>
@@ -77,33 +80,33 @@ export default function Home() {
       </section>
 
       {/* About Preview Section */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section className="py-16 md:py-24 bg-gray-900 border-y-2 border-primary-600">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-                  Family-Owned Excellence
+                <h2 className="text-4xl md:text-5xl font-black mb-6 text-white uppercase tracking-tight">
+                  Family-Owned <span className="text-primary-500">Excellence</span>
                 </h2>
-                <p className="text-lg text-gray-700 mb-4">
+                <p className="text-lg text-gray-300 mb-4">
                   Skully Life is a family-owned business dedicated to providing the highest 
                   quality wholesale THCa flower to retailers across the nation.
                 </p>
-                <p className="text-lg text-gray-700 mb-6">
+                <p className="text-lg text-gray-300 mb-6">
                   Our carefully selected network of farms in Oregon and California ensures 
                   consistent quality and premium products for your business.
                 </p>
                 <Link
                   href="/about"
-                  className="inline-block bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors"
+                  className="inline-block bg-primary-600 text-white px-8 py-3 rounded-md font-bold hover:bg-primary-500 transition-all glow-green uppercase tracking-wider"
                 >
-                  Learn More About Us
+                  Learn More
                 </Link>
               </div>
-              <div className="bg-primary-100 rounded-lg p-8 text-center">
-                <div className="text-4xl font-bold text-primary-700 mb-2">100%</div>
-                <div className="text-xl text-primary-800 mb-4">Family Owned</div>
-                <div className="text-gray-600">
+              <div className="bg-black border-2 border-primary-600 rounded-lg p-8 text-center glow-green">
+                <div className="text-6xl font-black text-primary-500 mb-2 text-glow-green">100%</div>
+                <div className="text-2xl font-bold text-white mb-4 uppercase tracking-wider">Family Owned</div>
+                <div className="text-gray-400">
                   Committed to quality and customer satisfaction
                 </div>
               </div>
@@ -113,18 +116,18 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-primary-600 text-white">
+      <section className="py-16 md:py-24 bg-black border-t-2 border-accent-600">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Stock Premium THCa Flower?
+          <h2 className="text-4xl md:text-5xl font-black mb-6 text-white uppercase tracking-tight">
+            Ready to Stock <span className="text-primary-500">Premium</span> THCa?
           </h2>
-          <p className="text-xl mb-8 text-primary-100 max-w-2xl mx-auto">
+          <p className="text-xl mb-8 text-gray-300 max-w-2xl mx-auto">
             Join our network of satisfied retailers. Get wholesale pricing and start 
             offering premium quality products to your customers today.
           </p>
           <Link
             href="/wholesale-inquiry"
-            className="inline-block bg-white text-primary-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-50 transition-colors shadow-lg"
+            className="inline-block bg-accent-600 text-white px-10 py-4 rounded-md font-bold text-lg hover:bg-accent-500 transition-all glow-red uppercase tracking-wider"
           >
             Request Wholesale Pricing
           </Link>

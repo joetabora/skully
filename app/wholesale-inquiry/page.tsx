@@ -62,15 +62,15 @@ export default function WholesaleInquiryPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-black">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white py-16 md:py-24">
+      <section className="urban-gradient border-b-2 border-accent-600 text-white py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Wholesale Inquiry
+            <h1 className="text-5xl md:text-6xl font-black mb-6 uppercase tracking-tight">
+              Wholesale <span className="text-accent-500">Inquiry</span>
             </h1>
-            <p className="text-xl md:text-2xl text-primary-100">
+            <p className="text-xl md:text-2xl text-gray-300 font-medium">
               Get wholesale pricing and start offering premium THCa flower to your customers
             </p>
           </div>
@@ -78,13 +78,13 @@ export default function WholesaleInquiryPage() {
       </section>
 
       {/* Form Section */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-black">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             {submitted ? (
-              <div className="bg-green-50 border-2 border-green-200 rounded-lg p-8 text-center">
+              <div className="bg-gray-900 border-2 border-primary-600 rounded-lg p-8 text-center glow-green">
                 <svg
-                  className="w-16 h-16 text-green-600 mx-auto mb-4"
+                  className="w-16 h-16 text-primary-500 mx-auto mb-4"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -96,27 +96,27 @@ export default function WholesaleInquiryPage() {
                     d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                   />
                 </svg>
-                <h2 className="text-2xl font-bold text-green-800 mb-2">
+                <h2 className="text-3xl font-black text-white mb-2 uppercase">
                   Thank You!
                 </h2>
-                <p className="text-green-700">
+                <p className="text-gray-300 text-lg">
                   We&apos;ve received your inquiry and will contact you shortly with 
                   wholesale pricing information.
                 </p>
               </div>
             ) : (
-              <div className="bg-white rounded-lg shadow-lg p-8 md:p-12">
+              <div className="bg-gray-900 border-2 border-accent-600 rounded-lg shadow-lg p-8 md:p-12 glow-red">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Business Information */}
                   <div>
-                    <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                      Business Information
+                    <h2 className="text-3xl font-black text-white mb-6 uppercase tracking-tight">
+                      Business <span className="text-accent-500">Information</span>
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
                         <label
                           htmlFor="businessName"
-                          className="block text-sm font-medium text-gray-700 mb-2"
+                          className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider"
                         >
                           Business Name *
                         </label>
@@ -127,13 +127,13 @@ export default function WholesaleInquiryPage() {
                           required
                           value={formData.businessName}
                           onChange={handleChange}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                          className="w-full px-4 py-3 bg-black border-2 border-gray-700 rounded-md text-white focus:ring-2 focus:ring-accent-500 focus:border-accent-500 transition-colors"
                         />
                       </div>
                       <div>
                         <label
                           htmlFor="contactName"
-                          className="block text-sm font-medium text-gray-700 mb-2"
+                          className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider"
                         >
                           Contact Name *
                         </label>
@@ -144,13 +144,13 @@ export default function WholesaleInquiryPage() {
                           required
                           value={formData.contactName}
                           onChange={handleChange}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                          className="w-full px-4 py-3 bg-black border-2 border-gray-700 rounded-md text-white focus:ring-2 focus:ring-accent-500 focus:border-accent-500 transition-colors"
                         />
                       </div>
                       <div>
                         <label
                           htmlFor="email"
-                          className="block text-sm font-medium text-gray-700 mb-2"
+                          className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider"
                         >
                           Email Address *
                         </label>
@@ -161,13 +161,13 @@ export default function WholesaleInquiryPage() {
                           required
                           value={formData.email}
                           onChange={handleChange}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                          className="w-full px-4 py-3 bg-black border-2 border-gray-700 rounded-md text-white focus:ring-2 focus:ring-accent-500 focus:border-accent-500 transition-colors"
                         />
                       </div>
                       <div>
                         <label
                           htmlFor="phone"
-                          className="block text-sm font-medium text-gray-700 mb-2"
+                          className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider"
                         >
                           Phone Number *
                         </label>
@@ -178,13 +178,13 @@ export default function WholesaleInquiryPage() {
                           required
                           value={formData.phone}
                           onChange={handleChange}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                          className="w-full px-4 py-3 bg-black border-2 border-gray-700 rounded-md text-white focus:ring-2 focus:ring-accent-500 focus:border-accent-500 transition-colors"
                         />
                       </div>
                       <div>
                         <label
                           htmlFor="businessType"
-                          className="block text-sm font-medium text-gray-700 mb-2"
+                          className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider"
                         >
                           Business Type *
                         </label>
@@ -194,7 +194,7 @@ export default function WholesaleInquiryPage() {
                           required
                           value={formData.businessType}
                           onChange={handleChange}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                          className="w-full px-4 py-3 bg-black border-2 border-gray-700 rounded-md text-white focus:ring-2 focus:ring-accent-500 focus:border-accent-500 transition-colors"
                         >
                           <option value="">Select...</option>
                           <option value="smoke-shop">Smoke Shop</option>
@@ -210,14 +210,14 @@ export default function WholesaleInquiryPage() {
 
                   {/* Business Address */}
                   <div>
-                    <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                      Business Address
+                    <h2 className="text-3xl font-black text-white mb-6 uppercase tracking-tight">
+                      Business <span className="text-accent-500">Address</span>
                     </h2>
                     <div className="space-y-6">
                       <div>
                         <label
                           htmlFor="businessAddress"
-                          className="block text-sm font-medium text-gray-700 mb-2"
+                          className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider"
                         >
                           Street Address *
                         </label>
@@ -228,14 +228,14 @@ export default function WholesaleInquiryPage() {
                           required
                           value={formData.businessAddress}
                           onChange={handleChange}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                          className="w-full px-4 py-3 bg-black border-2 border-gray-700 rounded-md text-white focus:ring-2 focus:ring-accent-500 focus:border-accent-500 transition-colors"
                         />
                       </div>
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div>
                           <label
                             htmlFor="city"
-                            className="block text-sm font-medium text-gray-700 mb-2"
+                            className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider"
                           >
                             City *
                           </label>
@@ -246,13 +246,13 @@ export default function WholesaleInquiryPage() {
                             required
                             value={formData.city}
                             onChange={handleChange}
-                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                            className="w-full px-4 py-3 bg-black border-2 border-gray-700 rounded-md text-white focus:ring-2 focus:ring-accent-500 focus:border-accent-500 transition-colors"
                           />
                         </div>
                         <div>
                           <label
                             htmlFor="state"
-                            className="block text-sm font-medium text-gray-700 mb-2"
+                            className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider"
                           >
                             State *
                           </label>
@@ -263,13 +263,13 @@ export default function WholesaleInquiryPage() {
                             required
                             value={formData.state}
                             onChange={handleChange}
-                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                            className="w-full px-4 py-3 bg-black border-2 border-gray-700 rounded-md text-white focus:ring-2 focus:ring-accent-500 focus:border-accent-500 transition-colors"
                           />
                         </div>
                         <div>
                           <label
                             htmlFor="zipCode"
-                            className="block text-sm font-medium text-gray-700 mb-2"
+                            className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider"
                           >
                             ZIP Code *
                           </label>
@@ -280,7 +280,7 @@ export default function WholesaleInquiryPage() {
                             required
                             value={formData.zipCode}
                             onChange={handleChange}
-                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                            className="w-full px-4 py-3 bg-black border-2 border-gray-700 rounded-md text-white focus:ring-2 focus:ring-accent-500 focus:border-accent-500 transition-colors"
                           />
                         </div>
                       </div>
@@ -289,14 +289,14 @@ export default function WholesaleInquiryPage() {
 
                   {/* Order Information */}
                   <div>
-                    <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                      Order Information
+                    <h2 className="text-3xl font-black text-white mb-6 uppercase tracking-tight">
+                      Order <span className="text-accent-500">Information</span>
                     </h2>
                     <div className="space-y-6">
                       <div>
                         <label
                           htmlFor="productsOfInterest"
-                          className="block text-sm font-medium text-gray-700 mb-2"
+                          className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider"
                         >
                           Products of Interest *
                         </label>
@@ -308,13 +308,13 @@ export default function WholesaleInquiryPage() {
                           value={formData.productsOfInterest}
                           onChange={handleChange}
                           placeholder="e.g., THCa Flower Pounds, Quarter Pounds, specific strains..."
-                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                          className="w-full px-4 py-3 bg-black border-2 border-gray-700 rounded-md text-white focus:ring-2 focus:ring-accent-500 focus:border-accent-500 transition-colors placeholder-gray-500"
                         />
                       </div>
                       <div>
                         <label
                           htmlFor="estimatedOrderVolume"
-                          className="block text-sm font-medium text-gray-700 mb-2"
+                          className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider"
                         >
                           Estimated Order Volume *
                         </label>
@@ -324,7 +324,7 @@ export default function WholesaleInquiryPage() {
                           required
                           value={formData.estimatedOrderVolume}
                           onChange={handleChange}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                          className="w-full px-4 py-3 bg-black border-2 border-gray-700 rounded-md text-white focus:ring-2 focus:ring-accent-500 focus:border-accent-500 transition-colors"
                         >
                           <option value="">Select...</option>
                           <option value="1-5-pounds">1-5 pounds per month</option>
@@ -337,7 +337,7 @@ export default function WholesaleInquiryPage() {
                       <div>
                         <label
                           htmlFor="additionalComments"
-                          className="block text-sm font-medium text-gray-700 mb-2"
+                          className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider"
                         >
                           Additional Comments or Questions
                         </label>
@@ -348,7 +348,7 @@ export default function WholesaleInquiryPage() {
                           value={formData.additionalComments}
                           onChange={handleChange}
                           placeholder="Any additional information you'd like to share..."
-                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                          className="w-full px-4 py-3 bg-black border-2 border-gray-700 rounded-md text-white focus:ring-2 focus:ring-accent-500 focus:border-accent-500 transition-colors placeholder-gray-500"
                         />
                       </div>
                     </div>
@@ -356,7 +356,7 @@ export default function WholesaleInquiryPage() {
 
                   <button
                     type="submit"
-                    className="w-full bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-700 transition-colors"
+                    className="w-full bg-accent-600 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-accent-500 transition-all glow-red uppercase tracking-wider"
                   >
                     Submit Wholesale Inquiry
                   </button>

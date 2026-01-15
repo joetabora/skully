@@ -9,15 +9,15 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-black">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white py-16 md:py-24">
+      <section className="urban-gradient border-b-2 border-primary-600 text-white py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              About Skully Life
+            <h1 className="text-5xl md:text-6xl font-black mb-6 uppercase tracking-tight">
+              About <span className="text-primary-500">Skully Life</span>
             </h1>
-            <p className="text-xl md:text-2xl text-primary-100">
+            <p className="text-xl md:text-2xl text-gray-300 font-medium">
               Family-Owned Excellence in Wholesale THCa Flower
             </p>
           </div>
@@ -25,16 +25,16 @@ export default function AboutPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-black">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             {/* Our Story */}
-            <div className="bg-white rounded-lg shadow-lg p-8 md:p-12 mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Our Story
+            <div className="bg-gray-900 border-2 border-primary-600 rounded-lg p-8 md:p-12 mb-12 glow-green">
+              <h2 className="text-4xl md:text-5xl font-black text-white mb-6 uppercase tracking-tight">
+                Our <span className="text-primary-500">Story</span>
               </h2>
               <div className="prose prose-lg max-w-none">
-                <p className="text-gray-700 mb-4 text-lg">
+                <p className="text-gray-300 mb-4 text-lg">
                   Skully Life is a family-owned business dedicated to providing 
                   the highest quality wholesale THCa flower to retailers across 
                   the United States. What started as a passion for premium cannabis 
@@ -42,13 +42,13 @@ export default function AboutPage() {
                   smoke shops, vape shops, gas stations, and convenience stores 
                   nationwide.
                 </p>
-                <p className="text-gray-700 mb-4 text-lg">
+                <p className="text-gray-300 mb-4 text-lg">
                   Our commitment to quality begins with our carefully selected 
                   network of farms in Oregon and California. These partnerships 
                   ensure that every product we offer meets our rigorous standards 
                   for freshness, potency, and overall quality.
                 </p>
-                <p className="text-gray-700 text-lg">
+                <p className="text-gray-300 text-lg">
                   As a family-owned business, we understand the importance of 
                   building lasting relationships with our clients. We&apos;re not just 
                   a supplier—we&apos;re your partner in success, committed to helping 
@@ -59,10 +59,10 @@ export default function AboutPage() {
 
             {/* Our Values */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-              <div className="bg-white rounded-lg shadow-lg p-8">
-                <div className="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+              <div className="bg-gray-900 border-2 border-primary-600 rounded-lg p-8 glow-green">
+                <div className="bg-primary-600 w-20 h-20 rounded-full flex items-center justify-center mb-6 glow-green">
                   <svg
-                    className="w-8 h-8 text-primary-700"
+                    className="w-10 h-10 text-white"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -75,18 +75,18 @@ export default function AboutPage() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                <h3 className="text-2xl font-bold text-white mb-4 uppercase">
                   Quality First
                 </h3>
-                <p className="text-gray-700">
+                <p className="text-gray-400">
                   We never compromise on quality. Every product is carefully 
                   selected and tested to ensure it meets our high standards.
                 </p>
               </div>
-              <div className="bg-white rounded-lg shadow-lg p-8">
-                <div className="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+              <div className="bg-gray-900 border-2 border-accent-600 rounded-lg p-8 glow-red">
+                <div className="bg-accent-600 w-20 h-20 rounded-full flex items-center justify-center mb-6 glow-red">
                   <svg
-                    className="w-8 h-8 text-primary-700"
+                    className="w-10 h-10 text-white"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -99,18 +99,18 @@ export default function AboutPage() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                <h3 className="text-2xl font-bold text-white mb-4 uppercase">
                   Family Values
                 </h3>
-                <p className="text-gray-700">
+                <p className="text-gray-400">
                   As a family-owned business, we treat every client like family. 
                   Your success is our success.
                 </p>
               </div>
-              <div className="bg-white rounded-lg shadow-lg p-8">
-                <div className="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+              <div className="bg-gray-900 border-2 border-primary-600 rounded-lg p-8 glow-green">
+                <div className="bg-primary-600 w-20 h-20 rounded-full flex items-center justify-center mb-6 glow-green">
                   <svg
-                    className="w-8 h-8 text-primary-700"
+                    className="w-10 h-10 text-white"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -123,18 +123,18 @@ export default function AboutPage() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                <h3 className="text-2xl font-bold text-white mb-4 uppercase">
                   Farm Network
                 </h3>
-                <p className="text-gray-700">
+                <p className="text-gray-400">
                   Our partnerships with farms in Oregon and California ensure 
                   consistent quality and fresh products.
                 </p>
               </div>
-              <div className="bg-white rounded-lg shadow-lg p-8">
-                <div className="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+              <div className="bg-gray-900 border-2 border-accent-600 rounded-lg p-8 glow-red">
+                <div className="bg-accent-600 w-20 h-20 rounded-full flex items-center justify-center mb-6 glow-red">
                   <svg
-                    className="w-8 h-8 text-primary-700"
+                    className="w-10 h-10 text-white"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -147,10 +147,10 @@ export default function AboutPage() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                <h3 className="text-2xl font-bold text-white mb-4 uppercase">
                   Reliable Service
                 </h3>
-                <p className="text-gray-700">
+                <p className="text-gray-400">
                   Fast shipping, competitive pricing, and responsive customer 
                   service you can count on.
                 </p>
@@ -158,27 +158,27 @@ export default function AboutPage() {
             </div>
 
             {/* Our Farms */}
-            <div className="bg-white rounded-lg shadow-lg p-8 md:p-12 mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Our Farm Network
+            <div className="bg-gray-900 border-2 border-primary-600 rounded-lg p-8 md:p-12 mb-12 glow-green">
+              <h2 className="text-4xl md:text-5xl font-black text-white mb-6 uppercase tracking-tight">
+                Our <span className="text-primary-500">Farm Network</span>
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                <div className="bg-black border-2 border-primary-600 p-6 rounded-lg">
+                  <h3 className="text-2xl font-bold text-white mb-4 uppercase">
                     Oregon Farms
                   </h3>
-                  <p className="text-gray-700 mb-4">
+                  <p className="text-gray-400 mb-4">
                     Our Oregon farm partners are known for their commitment to 
                     sustainable growing practices and premium quality products. 
                     The unique climate and soil conditions in Oregon contribute 
                     to exceptional THCa flower with distinct characteristics.
                   </p>
                 </div>
-                <div>
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                <div className="bg-black border-2 border-accent-600 p-6 rounded-lg">
+                  <h3 className="text-2xl font-bold text-white mb-4 uppercase">
                     California Farms
                   </h3>
-                  <p className="text-gray-700 mb-4">
+                  <p className="text-gray-400 mb-4">
                     Our California network brings decades of cultivation expertise 
                     and innovation. These farms produce consistently high-quality 
                     THCa flower that meets the highest industry standards.
@@ -188,17 +188,17 @@ export default function AboutPage() {
             </div>
 
             {/* CTA */}
-            <div className="bg-primary-600 text-white rounded-lg p-8 md:p-12 text-center">
-              <h2 className="text-3xl font-bold mb-4">
-                Partner With Us
+            <div className="bg-gray-900 border-2 border-accent-600 rounded-lg p-8 md:p-12 text-center glow-red">
+              <h2 className="text-4xl font-black mb-4 text-white uppercase tracking-tight">
+                Partner <span className="text-accent-500">With Us</span>
               </h2>
-              <p className="text-xl mb-8 text-primary-100">
+              <p className="text-xl mb-8 text-gray-300">
                 Ready to offer premium THCa flower to your customers? 
                 Get started with wholesale pricing today.
               </p>
               <Link
                 href="/wholesale-inquiry"
-                className="inline-block bg-white text-primary-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-50 transition-colors"
+                className="inline-block bg-accent-600 text-white px-10 py-4 rounded-md font-bold text-lg hover:bg-accent-500 transition-all glow-red uppercase tracking-wider"
               >
                 Request Wholesale Pricing
               </Link>
