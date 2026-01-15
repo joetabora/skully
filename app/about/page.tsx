@@ -11,13 +11,19 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-black">
       {/* Hero Section */}
-      <section className="urban-gradient border-b-2 border-primary-600 text-white py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-black mb-6 uppercase tracking-tight">
-              About <span className="text-primary-500">Skully Life</span>
+      <section className="urban-gradient py-24 md:py-32 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary-500/5 via-transparent to-accent-500/5"></div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-block mb-6">
+              <span className="text-sm font-bold text-primary-500 uppercase tracking-widest px-4 py-2 glass-card rounded-full">
+                Our Story
+              </span>
+            </div>
+            <h1 className="text-6xl md:text-7xl font-black mb-8 text-white uppercase tracking-tighter leading-none">
+              About <span className="gradient-text">Skully Life</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 font-medium">
+            <p className="text-xl md:text-2xl text-gray-300 font-light">
               Family-Owned Excellence in Wholesale THCa Flower
             </p>
           </div>
@@ -25,13 +31,13 @@ export default function AboutPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-16 md:py-24 bg-black">
+      <section className="py-24 md:py-32 bg-black">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             {/* Our Story */}
-            <div className="bg-gray-900 border-2 border-primary-600 rounded-lg p-8 md:p-12 mb-12 glow-green">
-              <h2 className="text-4xl md:text-5xl font-black text-white mb-6 uppercase tracking-tight">
-                Our <span className="text-primary-500">Story</span>
+            <div className="card-modern rounded-3xl p-12 md:p-16 mb-16 glow-green smooth-transition">
+              <h2 className="text-5xl md:text-6xl font-black text-white mb-8 uppercase tracking-tighter">
+                Our <span className="gradient-text">Story</span>
               </h2>
               <div className="prose prose-lg max-w-none">
                 <p className="text-gray-300 mb-4 text-lg">
@@ -58,11 +64,11 @@ export default function AboutPage() {
             </div>
 
             {/* Our Values */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-              <div className="bg-gray-900 border-2 border-primary-600 rounded-lg p-8 glow-green">
-                <div className="bg-primary-600 w-20 h-20 rounded-full flex items-center justify-center mb-6 glow-green">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+              <div className="card-modern rounded-2xl p-10 glow-green smooth-transition group">
+                <div className="bg-gradient-to-br from-primary-600 to-primary-700 w-24 h-24 rounded-2xl flex items-center justify-center mb-8 glow-green smooth-transition group-hover:scale-110 group-hover:rotate-3">
                   <svg
-                    className="w-10 h-10 text-white"
+                    className="w-12 h-12 text-white"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -75,18 +81,18 @@ export default function AboutPage() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4 uppercase">
+                <h3 className="text-3xl font-black text-white mb-4 uppercase tracking-tight">
                   Quality First
                 </h3>
-                <p className="text-gray-400">
+                <p className="text-gray-400 leading-relaxed font-light text-lg">
                   We never compromise on quality. Every product is carefully 
                   selected and tested to ensure it meets our high standards.
                 </p>
               </div>
-              <div className="bg-gray-900 border-2 border-accent-600 rounded-lg p-8 glow-red">
-                <div className="bg-accent-600 w-20 h-20 rounded-full flex items-center justify-center mb-6 glow-red">
+              <div className="card-modern rounded-2xl p-10 glow-red smooth-transition group">
+                <div className="bg-gradient-to-br from-accent-600 to-accent-700 w-24 h-24 rounded-2xl flex items-center justify-center mb-8 glow-red smooth-transition group-hover:scale-110 group-hover:-rotate-3">
                   <svg
-                    className="w-10 h-10 text-white"
+                    className="w-12 h-12 text-white"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -99,18 +105,18 @@ export default function AboutPage() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4 uppercase">
+                <h3 className="text-3xl font-black text-white mb-4 uppercase tracking-tight">
                   Family Values
                 </h3>
-                <p className="text-gray-400">
+                <p className="text-gray-400 leading-relaxed font-light text-lg">
                   As a family-owned business, we treat every client like family. 
                   Your success is our success.
                 </p>
               </div>
-              <div className="bg-gray-900 border-2 border-primary-600 rounded-lg p-8 glow-green">
-                <div className="bg-primary-600 w-20 h-20 rounded-full flex items-center justify-center mb-6 glow-green">
+              <div className="card-modern rounded-2xl p-10 glow-green smooth-transition group">
+                <div className="bg-gradient-to-br from-primary-600 to-primary-700 w-24 h-24 rounded-2xl flex items-center justify-center mb-8 glow-green smooth-transition group-hover:scale-110 group-hover:rotate-3">
                   <svg
-                    className="w-10 h-10 text-white"
+                    className="w-12 h-12 text-white"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -123,18 +129,18 @@ export default function AboutPage() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4 uppercase">
+                <h3 className="text-3xl font-black text-white mb-4 uppercase tracking-tight">
                   Farm Network
                 </h3>
-                <p className="text-gray-400">
+                <p className="text-gray-400 leading-relaxed font-light text-lg">
                   Our partnerships with farms in Oregon and California ensure 
                   consistent quality and fresh products.
                 </p>
               </div>
-              <div className="bg-gray-900 border-2 border-accent-600 rounded-lg p-8 glow-red">
-                <div className="bg-accent-600 w-20 h-20 rounded-full flex items-center justify-center mb-6 glow-red">
+              <div className="card-modern rounded-2xl p-10 glow-red smooth-transition group">
+                <div className="bg-gradient-to-br from-accent-600 to-accent-700 w-24 h-24 rounded-2xl flex items-center justify-center mb-8 glow-red smooth-transition group-hover:scale-110 group-hover:-rotate-3">
                   <svg
-                    className="w-10 h-10 text-white"
+                    className="w-12 h-12 text-white"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -147,10 +153,10 @@ export default function AboutPage() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4 uppercase">
+                <h3 className="text-3xl font-black text-white mb-4 uppercase tracking-tight">
                   Reliable Service
                 </h3>
-                <p className="text-gray-400">
+                <p className="text-gray-400 leading-relaxed font-light text-lg">
                   Fast shipping, competitive pricing, and responsive customer 
                   service you can count on.
                 </p>
@@ -158,27 +164,27 @@ export default function AboutPage() {
             </div>
 
             {/* Our Farms */}
-            <div className="bg-gray-900 border-2 border-primary-600 rounded-lg p-8 md:p-12 mb-12 glow-green">
-              <h2 className="text-4xl md:text-5xl font-black text-white mb-6 uppercase tracking-tight">
-                Our <span className="text-primary-500">Farm Network</span>
+            <div className="card-modern rounded-3xl p-12 md:p-16 mb-16 glow-green smooth-transition">
+              <h2 className="text-5xl md:text-6xl font-black text-white mb-10 uppercase tracking-tighter">
+                Our <span className="gradient-text">Farm Network</span>
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="bg-black border-2 border-primary-600 p-6 rounded-lg">
-                  <h3 className="text-2xl font-bold text-white mb-4 uppercase">
+                <div className="glass-card p-8 rounded-2xl">
+                  <h3 className="text-3xl font-black text-white mb-5 uppercase tracking-tight">
                     Oregon Farms
                   </h3>
-                  <p className="text-gray-400 mb-4">
+                  <p className="text-gray-400 leading-relaxed font-light text-lg">
                     Our Oregon farm partners are known for their commitment to 
                     sustainable growing practices and premium quality products. 
                     The unique climate and soil conditions in Oregon contribute 
                     to exceptional THCa flower with distinct characteristics.
                   </p>
                 </div>
-                <div className="bg-black border-2 border-accent-600 p-6 rounded-lg">
-                  <h3 className="text-2xl font-bold text-white mb-4 uppercase">
+                <div className="glass-card p-8 rounded-2xl">
+                  <h3 className="text-3xl font-black text-white mb-5 uppercase tracking-tight">
                     California Farms
                   </h3>
-                  <p className="text-gray-400 mb-4">
+                  <p className="text-gray-400 leading-relaxed font-light text-lg">
                     Our California network brings decades of cultivation expertise 
                     and innovation. These farms produce consistently high-quality 
                     THCa flower that meets the highest industry standards.
@@ -188,17 +194,17 @@ export default function AboutPage() {
             </div>
 
             {/* CTA */}
-            <div className="bg-gray-900 border-2 border-accent-600 rounded-lg p-8 md:p-12 text-center glow-red">
-              <h2 className="text-4xl font-black mb-4 text-white uppercase tracking-tight">
-                Partner <span className="text-accent-500">With Us</span>
+            <div className="card-modern rounded-3xl p-12 md:p-16 text-center glow-red smooth-transition">
+              <h2 className="text-5xl font-black mb-6 text-white uppercase tracking-tighter">
+                Partner <span className="gradient-text-red">With Us</span>
               </h2>
-              <p className="text-xl mb-8 text-gray-300">
+              <p className="text-xl mb-10 text-gray-300 font-light leading-relaxed max-w-2xl mx-auto">
                 Ready to offer premium THCa flower to your customers? 
                 Get started with wholesale pricing today.
               </p>
               <Link
                 href="/wholesale-inquiry"
-                className="inline-block bg-accent-600 text-white px-10 py-4 rounded-md font-bold text-lg hover:bg-accent-500 transition-all glow-red uppercase tracking-wider"
+                className="inline-block bg-gradient-to-r from-accent-600 to-accent-700 text-white px-12 py-5 rounded-xl font-black text-lg hover:from-accent-500 hover:to-accent-600 smooth-transition glow-red-hover btn-modern uppercase tracking-wider shadow-2xl"
               >
                 Request Wholesale Pricing
               </Link>

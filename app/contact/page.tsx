@@ -44,13 +44,19 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-black">
       {/* Hero Section */}
-      <section className="urban-gradient border-b-2 border-primary-600 text-white py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-black mb-6 uppercase tracking-tight">
-              Contact <span className="text-primary-500">Us</span>
+      <section className="urban-gradient py-24 md:py-32 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary-500/5 via-transparent to-accent-500/5"></div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-block mb-6">
+              <span className="text-sm font-bold text-primary-500 uppercase tracking-widest px-4 py-2 glass-card rounded-full">
+                Get in Touch
+              </span>
+            </div>
+            <h1 className="text-6xl md:text-7xl font-black mb-8 text-white uppercase tracking-tighter leading-none">
+              Contact <span className="gradient-text">Us</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 font-medium">
+            <p className="text-xl md:text-2xl text-gray-300 font-light">
               Get in touch with our team for wholesale inquiries or questions
             </p>
           </div>
@@ -58,19 +64,19 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 md:py-24 bg-black">
+      <section className="py-24 md:py-32 bg-black">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               {/* Contact Form */}
-              <div className="bg-gray-900 border-2 border-primary-600 rounded-lg shadow-lg p-8 md:p-12 glow-green">
-                <h2 className="text-3xl font-black text-white mb-6 uppercase tracking-tight">
-                  Send Us a <span className="text-primary-500">Message</span>
+              <div className="card-modern rounded-3xl p-10 md:p-14 glow-green smooth-transition">
+                <h2 className="text-4xl font-black text-white mb-8 uppercase tracking-tighter">
+                  Send Us a <span className="gradient-text">Message</span>
                 </h2>
                 {submitted ? (
-                  <div className="bg-black border-2 border-primary-600 rounded-lg p-6 text-center glow-green">
+                  <div className="glass-card rounded-2xl p-10 text-center glow-green smooth-transition">
                     <svg
-                      className="w-12 h-12 text-primary-500 mx-auto mb-4"
+                      className="w-16 h-16 text-primary-500 mx-auto mb-6"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -82,10 +88,10 @@ export default function ContactPage() {
                         d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                       />
                     </svg>
-                    <h3 className="text-2xl font-black text-white mb-2 uppercase">
+                    <h3 className="text-3xl font-black text-white mb-3 uppercase tracking-tight">
                       Message Sent!
                     </h3>
-                    <p className="text-gray-300">
+                    <p className="text-gray-300 text-lg font-light">
                       We&apos;ll get back to you as soon as possible.
                     </p>
                   </div>
@@ -94,7 +100,7 @@ export default function ContactPage() {
                     <div>
                       <label
                         htmlFor="name"
-                        className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider"
+                        className="block text-sm font-bold text-gray-300 mb-3 uppercase tracking-wider"
                       >
                         Name *
                       </label>
@@ -105,13 +111,13 @@ export default function ContactPage() {
                         required
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-black border-2 border-gray-700 rounded-md text-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
+                        className="input-modern w-full px-5 py-4 rounded-xl text-white"
                       />
                     </div>
                     <div>
                       <label
                         htmlFor="email"
-                        className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider"
+                        className="block text-sm font-bold text-gray-300 mb-3 uppercase tracking-wider"
                       >
                         Email Address *
                       </label>
@@ -122,13 +128,13 @@ export default function ContactPage() {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-black border-2 border-gray-700 rounded-md text-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
+                        className="input-modern w-full px-5 py-4 rounded-xl text-white"
                       />
                     </div>
                     <div>
                       <label
                         htmlFor="phone"
-                        className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider"
+                        className="block text-sm font-bold text-gray-300 mb-3 uppercase tracking-wider"
                       >
                         Phone Number
                       </label>
@@ -138,13 +144,13 @@ export default function ContactPage() {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-black border-2 border-gray-700 rounded-md text-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
+                        className="input-modern w-full px-5 py-4 rounded-xl text-white"
                       />
                     </div>
                     <div>
                       <label
                         htmlFor="subject"
-                        className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider"
+                        className="block text-sm font-bold text-gray-300 mb-3 uppercase tracking-wider"
                       >
                         Subject *
                       </label>
@@ -154,7 +160,7 @@ export default function ContactPage() {
                         required
                         value={formData.subject}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-black border-2 border-gray-700 rounded-md text-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
+                        className="input-modern w-full px-5 py-4 rounded-xl text-white"
                       >
                         <option value="">Select a subject...</option>
                         <option value="wholesale-inquiry">Wholesale Inquiry</option>
@@ -167,7 +173,7 @@ export default function ContactPage() {
                     <div>
                       <label
                         htmlFor="message"
-                        className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider"
+                        className="block text-sm font-bold text-gray-300 mb-3 uppercase tracking-wider"
                       >
                         Message *
                       </label>
@@ -178,12 +184,12 @@ export default function ContactPage() {
                         rows={6}
                         value={formData.message}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-black border-2 border-gray-700 rounded-md text-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
+                        className="input-modern w-full px-5 py-4 rounded-xl text-white resize-none"
                       />
                     </div>
                     <button
                       type="submit"
-                      className="w-full bg-primary-600 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-primary-500 transition-all glow-green uppercase tracking-wider"
+                      className="w-full bg-gradient-to-r from-primary-600 to-primary-700 text-white px-10 py-5 rounded-xl font-black text-lg hover:from-primary-500 hover:to-primary-600 smooth-transition glow-green-hover btn-modern uppercase tracking-wider shadow-xl"
                     >
                       Send Message
                     </button>
@@ -193,15 +199,15 @@ export default function ContactPage() {
 
               {/* Contact Information */}
               <div className="space-y-8">
-                <div className="bg-gray-900 border-2 border-primary-600 rounded-lg shadow-lg p-8 glow-green">
-                  <h2 className="text-3xl font-black text-white mb-6 uppercase tracking-tight">
-                    Get in <span className="text-primary-500">Touch</span>
+                <div className="card-modern rounded-3xl p-10 glow-green smooth-transition">
+                  <h2 className="text-4xl font-black text-white mb-8 uppercase tracking-tighter">
+                    Get in <span className="gradient-text">Touch</span>
                   </h2>
-                  <div className="space-y-6">
-                    <div className="flex items-start">
-                      <div className="bg-primary-600 w-14 h-14 rounded-full flex items-center justify-center flex-shrink-0 glow-green">
+                  <div className="space-y-8">
+                    <div className="flex items-start group">
+                      <div className="bg-gradient-to-br from-primary-600 to-primary-700 w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 glow-green smooth-transition group-hover:scale-110">
                         <svg
-                          className="w-7 h-7 text-white"
+                          className="w-8 h-8 text-white"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -214,18 +220,18 @@ export default function ContactPage() {
                           />
                         </svg>
                       </div>
-                      <div className="ml-4">
-                        <h3 className="font-bold text-white mb-1 uppercase tracking-wider">Email</h3>
-                        <p className="text-gray-400">
+                      <div className="ml-5">
+                        <h3 className="font-black text-white mb-2 uppercase tracking-wider text-lg">Email</h3>
+                        <p className="text-gray-400 font-light text-lg">
                           {/* Add your email when available */}
                           info@skullylife.com
                         </p>
                       </div>
                     </div>
-                    <div className="flex items-start">
-                      <div className="bg-accent-600 w-14 h-14 rounded-full flex items-center justify-center flex-shrink-0 glow-red">
+                    <div className="flex items-start group">
+                      <div className="bg-gradient-to-br from-accent-600 to-accent-700 w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 glow-red smooth-transition group-hover:scale-110">
                         <svg
-                          className="w-7 h-7 text-white"
+                          className="w-8 h-8 text-white"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -238,18 +244,18 @@ export default function ContactPage() {
                           />
                         </svg>
                       </div>
-                      <div className="ml-4">
-                        <h3 className="font-bold text-white mb-1 uppercase tracking-wider">Phone</h3>
-                        <p className="text-gray-400">
+                      <div className="ml-5">
+                        <h3 className="font-black text-white mb-2 uppercase tracking-wider text-lg">Phone</h3>
+                        <p className="text-gray-400 font-light text-lg">
                           {/* Add your phone number when available */}
                           (555) 123-4567
                         </p>
                       </div>
                     </div>
-                    <div className="flex items-start">
-                      <div className="bg-primary-600 w-14 h-14 rounded-full flex items-center justify-center flex-shrink-0 glow-green">
+                    <div className="flex items-start group">
+                      <div className="bg-gradient-to-br from-primary-600 to-primary-700 w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 glow-green smooth-transition group-hover:scale-110">
                         <svg
-                          className="w-7 h-7 text-white"
+                          className="w-8 h-8 text-white"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -268,9 +274,9 @@ export default function ContactPage() {
                           />
                         </svg>
                       </div>
-                      <div className="ml-4">
-                        <h3 className="font-bold text-white mb-1 uppercase tracking-wider">Service Area</h3>
-                        <p className="text-gray-400">
+                      <div className="ml-5">
+                        <h3 className="font-black text-white mb-2 uppercase tracking-wider text-lg">Service Area</h3>
+                        <p className="text-gray-400 font-light text-lg">
                           Wisconsin & Nationwide Shipping Available
                         </p>
                       </div>
@@ -278,17 +284,17 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="bg-gray-900 border-2 border-accent-600 rounded-lg p-8 glow-red">
-                  <h3 className="text-2xl font-black mb-4 text-white uppercase tracking-tight">
-                    For Wholesale <span className="text-accent-500">Inquiries</span>
+                <div className="card-modern rounded-3xl p-10 glow-red smooth-transition">
+                  <h3 className="text-3xl font-black mb-5 text-white uppercase tracking-tighter">
+                    For Wholesale <span className="gradient-text-red">Inquiries</span>
                   </h3>
-                  <p className="mb-6 text-gray-300">
+                  <p className="mb-8 text-gray-300 font-light text-lg leading-relaxed">
                     Business owners looking for wholesale pricing and bulk orders 
                     should use our dedicated wholesale inquiry form for faster service.
                   </p>
                   <Link
                     href="/wholesale-inquiry"
-                    className="inline-block bg-accent-600 text-white px-6 py-3 rounded-md font-bold hover:bg-accent-500 transition-all glow-red uppercase tracking-wider"
+                    className="inline-block bg-gradient-to-r from-accent-600 to-accent-700 text-white px-8 py-4 rounded-xl font-black hover:from-accent-500 hover:to-accent-600 smooth-transition glow-red-hover btn-modern uppercase tracking-wider shadow-xl"
                   >
                     Go to Wholesale Inquiry
                   </Link>

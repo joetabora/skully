@@ -47,13 +47,19 @@ export default function ProductsPage() {
   return (
     <div className="min-h-screen bg-black">
       {/* Hero Section */}
-      <section className="urban-gradient border-b-2 border-primary-600 text-white py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-black mb-6 uppercase tracking-tight">
-              Premium <span className="text-primary-500">THCa</span> Products
+      <section className="urban-gradient py-24 md:py-32 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary-500/5 via-transparent to-accent-500/5"></div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-block mb-6">
+              <span className="text-sm font-bold text-primary-500 uppercase tracking-widest px-4 py-2 glass-card rounded-full">
+                Product Catalog
+              </span>
+            </div>
+            <h1 className="text-6xl md:text-7xl font-black mb-8 text-white uppercase tracking-tighter leading-none">
+              Premium <span className="gradient-text">THCa</span> Products
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 font-medium">
+            <p className="text-xl md:text-2xl text-gray-300 font-light max-w-2xl mx-auto">
               Wholesale quantities available in pounds and quarter-pounds
             </p>
           </div>
@@ -61,53 +67,55 @@ export default function ProductsPage() {
       </section>
 
       {/* Products Grid */}
-      <section className="py-16 md:py-24 bg-black">
+      <section className="py-24 md:py-32 bg-black">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {products.map((product) => {
-              const borderColor = product.color === "green" ? "border-primary-600" : "border-accent-600";
-              const glowClass = product.color === "green" ? "glow-green" : "glow-red";
-              const bgColor = product.color === "green" ? "bg-primary-600" : "bg-accent-600";
-              const hoverBg = product.color === "green" ? "hover:bg-primary-500" : "hover:bg-accent-500";
+              const glowClass = product.color === "green" ? "glow-green-hover" : "glow-red-hover";
+              const gradientFrom = product.color === "green" ? "from-primary-600" : "from-accent-600";
+              const gradientTo = product.color === "green" ? "to-primary-700" : "to-accent-700";
+              const iconColor = product.color === "green" ? "text-primary-500" : "text-accent-500";
               
               return (
                 <div
                   key={product.id}
-                  className={`bg-gray-900 rounded-lg border-2 ${borderColor} overflow-hidden hover:scale-105 transition-transform ${glowClass}`}
+                  className="card-modern rounded-3xl overflow-hidden smooth-transition group"
                 >
-                  <div className="p-8">
-                    <div className="mb-4">
-                      <span className={`${bgColor} text-white px-4 py-2 rounded-md text-sm font-bold uppercase tracking-wider`}>
+                  <div className="p-10">
+                    <div className="mb-6">
+                      <span className={`bg-gradient-to-r ${gradientFrom} ${gradientTo} text-white px-5 py-2.5 rounded-xl text-sm font-bold uppercase tracking-wider inline-block shadow-lg`}>
                         {product.size}
                       </span>
                     </div>
-                    <h2 className="text-2xl font-bold text-white mb-4 uppercase">
+                    <h2 className="text-3xl font-black text-white mb-5 uppercase tracking-tight leading-tight">
                       {product.name}
                     </h2>
-                    <p className="text-gray-400 mb-6">{product.description}</p>
-                    <ul className="space-y-3 mb-6">
+                    <p className="text-gray-400 mb-8 leading-relaxed font-light text-lg">{product.description}</p>
+                    <ul className="space-y-4 mb-8">
                       {product.features.map((feature, index) => (
                         <li key={index} className="flex items-center text-gray-300">
-                          <svg
-                            className={`w-5 h-5 ${product.color === "green" ? "text-primary-500" : "text-accent-500"} mr-3`}
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M5 13l4 4L19 7"
-                            />
-                          </svg>
-                          {feature}
+                          <div className={`w-6 h-6 rounded-full bg-gradient-to-br ${gradientFrom} ${gradientTo} flex items-center justify-center mr-4 flex-shrink-0`}>
+                            <svg
+                              className="w-4 h-4 text-white"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={3}
+                                d="M5 13l4 4L19 7"
+                              />
+                            </svg>
+                          </div>
+                          <span className="font-medium">{feature}</span>
                         </li>
                       ))}
                     </ul>
                     <Link
                       href="/wholesale-inquiry"
-                      className={`block w-full ${bgColor} text-white text-center px-6 py-3 rounded-md font-bold hover:opacity-90 transition-all uppercase tracking-wider ${glowClass}`}
+                      className={`block w-full bg-gradient-to-r ${gradientFrom} ${gradientTo} text-white text-center px-6 py-4 rounded-xl font-bold hover:opacity-90 smooth-transition uppercase tracking-wider ${glowClass} btn-modern shadow-xl`}
                     >
                       Request Pricing
                     </Link>
@@ -118,24 +126,24 @@ export default function ProductsPage() {
           </div>
 
           {/* CTA Section */}
-          <div className="bg-gray-900 border-2 border-accent-600 rounded-lg p-8 md:p-12 text-center glow-red">
-            <h2 className="text-4xl font-black mb-4 text-white uppercase tracking-tight">
+          <div className="card-modern rounded-3xl p-12 md:p-16 text-center glow-green smooth-transition">
+            <h2 className="text-4xl md:text-5xl font-black mb-6 text-white uppercase tracking-tighter">
               Need Custom Quantities?
             </h2>
-            <p className="text-xl mb-8 text-gray-300">
+            <p className="text-xl mb-10 text-gray-300 max-w-2xl mx-auto font-light leading-relaxed">
               Contact us for wholesale pricing, bulk orders, or to learn more about 
               our products and sourcing.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/wholesale-inquiry"
-                className="bg-accent-600 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-accent-500 transition-all glow-red uppercase tracking-wider"
+                className="bg-gradient-to-r from-accent-600 to-accent-700 text-white px-10 py-5 rounded-xl font-bold text-lg hover:from-accent-500 hover:to-accent-600 smooth-transition glow-red-hover btn-modern uppercase tracking-wider shadow-xl"
               >
                 Submit Inquiry
               </Link>
               <Link
                 href="/contact"
-                className="bg-primary-600 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-primary-500 transition-all glow-green uppercase tracking-wider border-2 border-primary-500"
+                className="bg-gradient-to-r from-primary-600 to-primary-700 text-white px-10 py-5 rounded-xl font-bold text-lg hover:from-primary-500 hover:to-primary-600 smooth-transition glow-green-hover btn-modern uppercase tracking-wider shadow-xl"
               >
                 Contact Us
               </Link>
@@ -145,37 +153,31 @@ export default function ProductsPage() {
       </section>
 
       {/* Info Section */}
-      <section className="py-16 bg-gray-900 border-t-2 border-primary-600">
+      <section className="py-24 bg-gradient-to-b from-black via-gray-900/30 to-black">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-black text-center mb-12 text-white uppercase tracking-tight">
-              Why Choose <span className="text-primary-500">Skully Life</span>?
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-5xl font-black text-center mb-16 text-white uppercase tracking-tighter">
+              Why Choose <span className="gradient-text">Skully Life</span>?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center bg-black border-2 border-primary-600 p-6 rounded-lg glow-green">
-                <div className="text-5xl font-black text-primary-500 mb-3 text-glow-green">
-                  ✓
-                </div>
-                <h3 className="text-xl font-bold mb-2 text-white uppercase">Lab Tested</h3>
-                <p className="text-gray-400">
+              <div className="text-center card-modern p-8 rounded-2xl smooth-transition group">
+                <div className="text-6xl font-black gradient-text mb-4">✓</div>
+                <h3 className="text-2xl font-black mb-3 text-white uppercase tracking-tight">Lab Tested</h3>
+                <p className="text-gray-400 leading-relaxed font-light">
                   All products undergo rigorous testing for quality and purity
                 </p>
               </div>
-              <div className="text-center bg-black border-2 border-primary-600 p-6 rounded-lg glow-green">
-                <div className="text-5xl font-black text-primary-500 mb-3 text-glow-green">
-                  ✓
-                </div>
-                <h3 className="text-xl font-bold mb-2 text-white uppercase">Fresh Harvest</h3>
-                <p className="text-gray-400">
+              <div className="text-center card-modern p-8 rounded-2xl smooth-transition group">
+                <div className="text-6xl font-black gradient-text mb-4">✓</div>
+                <h3 className="text-2xl font-black mb-3 text-white uppercase tracking-tight">Fresh Harvest</h3>
+                <p className="text-gray-400 leading-relaxed font-light">
                   Direct from our network of farms for maximum freshness
                 </p>
               </div>
-              <div className="text-center bg-black border-2 border-accent-600 p-6 rounded-lg glow-red">
-                <div className="text-5xl font-black text-accent-500 mb-3 text-glow-red">
-                  ✓
-                </div>
-                <h3 className="text-xl font-bold mb-2 text-white uppercase">Competitive Pricing</h3>
-                <p className="text-gray-400">
+              <div className="text-center card-modern p-8 rounded-2xl smooth-transition group">
+                <div className="text-6xl font-black gradient-text-red mb-4">✓</div>
+                <h3 className="text-2xl font-black mb-3 text-white uppercase tracking-tight">Competitive Pricing</h3>
+                <p className="text-gray-400 leading-relaxed font-light">
                   Wholesale prices designed for business profitability
                 </p>
               </div>
